@@ -1,0 +1,24 @@
+- title: Home
+  url: /
+  description: Homepage
+- title: About
+  url: /about
+  description: About Team Inceptus
+- title: Statistics
+  url: /statistics
+  description: Statistics about Team Inceptus
+- title: Contact
+  url: mailto:support@teaminceptus.us
+  description: Contact Team Inceptus
+- title:
+  url: https://github.com/Team-Inceptus
+  description: GitHub
+  icon: /assets/github.png
+- title:
+  url: https://discord.gg/WVFNWEvuqX
+  icon: /assets/discord.png
+  description: Team Inceptus Discord
+- title:
+  url: https://www.spigotmc.org/members/gamercoder215.1229877/#resources
+  icon: /assets/spigot_modern.png
+  description: SpigotMC Plugins

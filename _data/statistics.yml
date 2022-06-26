@@ -1,0 +1,11 @@
+- name: Downloads
+  icon: /assets/spigot_modern.png
+  function: getDownloads
+  description: Spigot Downloads
+- name: Letters of Code
+  icon: /assets/github.png
+  function: getSize
+  url: https://github.com/Team-Inceptus
+- name: Stars
+  icon: /assets/star.png
+  function: getStars
