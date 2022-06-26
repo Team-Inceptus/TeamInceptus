@@ -1,0 +1,16 @@
+<header>
+
+    <nav class="main-menu">
+        <a href="/" class="title"><img src="/favicon.png" alt="Inceptus Logo" class="logo">Team Inceptus</a>
+
+        {% assign sorted_pages = site.data.menu | sort: "order" %}
+        {% for pg in sorted_pages %}
+        {% if pg.title %}
+            <a class="page-link" title="{{ pg.description }}" href="{{ pg.url }}">{{ pg.title }}</a>
+        {% elsif pg.icon %}
+            <a title="{{ pg.description }}" href="{{ pg.url }}" target="_blank"><img class="page-link-icon" src="{{ pg.icon }}" alt=""></a>
+        {% endif %}
+        {% endfor %}
+    </nav>
+
+</header>
