@@ -20,16 +20,24 @@
 
     <title>{{ page_title }}</title>
 
-    <meta name="theme_color" content="164702">
+    <meta name="theme_color" content="#164702">
 
     <meta name="twitter:title" content="{{ page_title }}">
-    {% if page.summary %}<meta name="twitter:card" content="{{ page.summary }}"> {% endif %}
+    {% if page.summary %}
+    <meta name="twitter:card" content="{{ page.summary }}">
+    {% else %}
+    <meta name="twitter:card" content="{{ page.content | strip_html | truncate: 200 }}">
+    {% endif %}
 
     <meta property="og:title" content="{{ page_title }}">
-    {% if page.summary %}<meta name="og:description" content="{{ page.summary }}"> {% endif %}
+    {% if page.summary %}
+    <meta name="og:description" content="{{ page.summary }}">
+    {% else %}
+    <meta name="og:description" content="{{ page.content | strip_html | truncate: 200 }}">
+    {% endif %}
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url }}">
-    <meta property="og:image" content="{{ page.url }}favicon.png">
+    <meta property="og:image" content="https://teaminceptus.us/favicon.png">
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:locale" content="en_US">
 
