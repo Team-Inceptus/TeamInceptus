@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="index index-background">
+
+    <h1 id="index-title">Team Inceptus</h1>
+    <p id="index-description">{{ content }}</p>
+
+    <div class="pinned_repos">
+        {% assign pinned = site.data.pinned_repos | sort: "name" %}
+        {% for repo in pinned %}
+            <div class="pinned_repo">
+                <a href="https://github.com/{{ repo.url }}" target="_blank" class="repo_title">{% if repo.avatar %}<img src="{{ repo.avatar }}" alt="" class="repo_avatar">{% endif %} {{ repo.name }}</a>
+                <img src="https://opengraph.githubassets.com/045ba5c69020a7ab67effadc7565e7a9b1374ea5ee31774132ed0eb7904cad4c/{{ repo.git }}" alt="" class="repo_logo">
+                {% assign contributors = site.data.members %}
+                {% for contr in contributors %}
+                {% if contr.name == repo.main_contributor %}
+                    <p class="repo_text"><img src="{{ contr.icon }}" class="repo_subicon" alt="" title="{{ contr.name }}"><a class="repo_text" href="https://github.com/{{ contr.github }}" target="_blank">{{ contr.name }} </a>
+                        &nbsp;&nbsp;<a href="https://programminglanguages.info/language/{{ repo.lang }}" target="_blank"><img src="/assets/langs/{{ repo.lang }}.png" class="repo_subicon"></a>
+                        {% if repo.spigot %}
+                        &nbsp;<a href="{{ repo.spigot }}" target="_blank"><img src="/assets/spigot.png" class="repo_subicon"></a>
+                        {% endif %}
+                        {% if repo.javadocs %}
+                        &nbsp;<a href="{{ repo.javadocs }}" target="_blank"><img src="/assets/javadoc.png" class="repo_subicon nocircle"></a>
+                        {% endif %}
+                    </p>
+                {% break %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
