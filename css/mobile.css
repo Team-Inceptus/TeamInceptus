@@ -1,0 +1,53 @@
+@media (max-width: 375px) {
+
+    .pinned_repo {
+        height: 45% !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .page-link {
+        margin-left: 0 !important;
+    }
+
+    .repo_title {
+        font-size: 12px !important;
+    }
+
+    .pinned_repo {
+        height: 36%;
+    }
+
+    .page-link {
+        font-size: 12px !important;
+        letter-spacing: 1px;
+    }
+
+    .title {
+        font-size: large;
+    }
+
+    .about-title {
+        font-size: x-large;
+    }
+
+    .about-member-name {
+        font-size: 18px !important;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .pinned_repo {
+        height: 63% !important;
+    }
+}
+
+@media (max-width: 1150px) {
+
+    .pinned_repo {
+        max-height: 260px !important;
+    }
+
+}

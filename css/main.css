@@ -1,0 +1,342 @@
+@font-face {
+    src: url("/fonts/LowballNeueLight.ttf");
+    font-family: "Lowball Light";
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5%);
+    }
+}
+
+@keyframes lower {
+    from {
+        transform: translateY(-5%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100% !important;
+    font-family: "Lowball Light", serif;
+    font-size: x-large;
+    letter-spacing: 2px;
+    padding: 0;
+    margin: 0;
+    background-color: darkgray;
+}
+
+h1:hover {
+    transition: transform 1s ease-in-out;
+    transform: scale(1.1);
+}
+
+h1 {
+    transition: transform 1s ease-in-out;
+}
+
+.logo {
+    width: 3%;
+    margin-right: 1%;
+    vertical-align: middle;
+    min-height: 24px;
+    min-width: 24px;
+}
+
+.title {
+    font-size: xx-large;
+    letter-spacing: 2px;
+    margin-right: 1%;
+    vertical-align: middle;
+    text-decoration: none;
+    color: black;
+}
+
+/* Menu Navbar */
+.main-menu {
+    margin-top: 0;
+    background-color: white;
+    border-bottom: black 2px solid;
+    vertical-align: middle;
+    height: 3%;
+    width: 100%;
+    font-size: 100%;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.page-link:hover {
+    color: gray;
+}
+
+.page-link {
+    text-decoration: none;
+    color: black;
+    margin-left: 1%;
+    vertical-align: middle;
+}
+
+.page-link-icon {
+    min-height: 24px;
+    min-width: 24px;
+    max-height: 64px;
+    width: 3%;
+    max-width: 64px;
+    margin-right: 1%;
+    margin-left: 1%;
+    float: right;
+}
+
+/* index */
+.index {
+    text-align: center;
+    margin-top: 0;
+    height: 90%;
+    padding-top: 5%;
+    transition: all 5s ease-in;
+    background-size: cover;
+}
+
+.index-background {
+    background-image: linear-gradient(to right, #637895, lightseagreen);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#index-title {
+    color: orange;
+    font-weight: bold;
+    font-size: xxx-large;
+    margin-top: 0;
+    letter-spacing: 3px;
+}
+
+/* index - Pinned */
+
+.pinned_repos {
+    text-decoration: none;
+    margin-top: 10%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.pinned_repo {
+    text-decoration: none;
+    height: 50%;
+    min-width: 17%;
+    max-width: 360px;
+    border-radius: 10%;
+    border: black 2px solid;
+    background-color: #ffffff;
+    float: left;
+    animation: lower 1s;
+}
+
+.pinned_repo:not(:last-child) {
+    margin-right: 2%;
+}
+
+
+.pinned_repo:hover {
+    transform: translateY(-5%);
+    animation: rise 1s;
+}
+
+.repo_avatar {
+    height: 10%;
+    margin-right: 1%;
+    vertical-align: middle;
+}
+
+.repo_title {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    letter-spacing: normal;
+    color: black;
+    vertical-align: middle;
+}
+
+.repo_title:hover {
+    color: #222;
+}
+
+.repo_logo {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.repo_text {
+    font-size: medium;
+    vertical-align: middle;
+    font-family: 'Oswand', sans-serif;
+    letter-spacing: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.repo_subicon {
+    border-radius: 50%;
+    width: 5%;
+    vertical-align: middle;
+    min-width: 16px;
+}
+
+/* About */
+
+.about {
+    text-align: center;
+    margin-top: 0;
+    height: 100%;
+    background-size: cover;
+    max-height: 720px;
+}
+
+.about-title {
+    text-decoration: underline;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: normal;
+    vertical-align: baseline;
+}
+
+.about-content {
+    font-family: "Poppins", serif;
+    letter-spacing: normal;
+    font-size: large;
+    width: 20%;
+    padding: 3%;
+    height: 50%;
+    min-width: 240px;
+    border: solid 1px lightgray;
+    margin-bottom: 3%;
+    max-height: 520px;
+}
+
+.about-member {
+    vertical-align: middle;
+    width: 20%;
+}
+
+.about-member:not(:last-child) {
+    margin-right: 10%;
+}
+
+.about-member-icon {
+    height: auto;
+    width: 10%;
+    min-width: 32px;
+    min-height: 32px;
+    max-height: 64px;
+    max-width: 64px;
+    border-radius: 50%;
+    margin-right: 1%;
+    transition: transform 1s ease-in-out;
+    border: 1px gray solid;
+    vertical-align: middle;
+}
+
+.about-member-name {
+    font-size: x-large;
+}
+
+.about-member-icon:hover {
+    transform: scale(1.2);
+}
+
+#member-text {
+    color: lightgray;
+    animation: fade-in ease-in-out 2.5s;
+    font-size: medium;
+}
+
+/* Statistics */
+.statistics {
+    background: linear-gradient(to right, mediumseagreen, lightblue);
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.statistics-title {
+    text-decoration: underline;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: normal;
+    vertical-align: baseline;
+    padding-top: 2%;
+    margin: 0 0 15vh;
+}
+
+.statistics-item {
+    vertical-align: middle;
+    font-size: xxx-large;
+    margin-top: 0;
+    transition: transform 1s ease-in-out;
+}
+
+.statistics-item.number:hover {
+    transition: transform 1s ease-in-out;
+    transform: scale(1.1);
+}
+
+.statistics-item-icon {
+    height: 48px;
+    width: 48px;
+    max-width: 64px;
+    min-width: 32px;
+    vertical-align: baseline;
+    transition: transform 1s ease-in-out;
+}
+
+.statistics-item-icon:hover {
+    transition: transform 1s ease-in-out;
+    transform: scale(1.2);
+}
+
+/* Footer */
+
+.footer {
+    background-color: darkgray;
+    width: 100%;
+    height: 1%;
+    padding-top: 4px;
+    border-top: black 1px solid;
+    font-family: 'Times New Roman', serif;
+    letter-spacing: normal;
+    font-size: small;
+    margin-top: 3vh;
+    vertical-align: middle;
+    bottom: 0;
+}
+
+#footer-text {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    vertical-align: middle;;
+}
+
+/* Other */
+.nocircle {
+    border-radius: 0; !important;
+}
+
+.number {
+    text-decoration: none;
+}
