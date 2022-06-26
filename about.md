@@ -1,6 +1,7 @@
 ---
 layout: about
 title: About
+summary: About Team Inceptus
 ---
 
 Team Inceptus originated in March 2022 as the development team of TheNoobyGods before it disbanded. The team now works on spigot plugins, forge mods, and other non-JDK projects.
