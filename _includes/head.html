@@ -1,44 +1,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Team Inceptus Website">
-    <meta name="author" content="GamerCoder215">
 
-    <link href="//fonts.googleapis.com/css?family=Oswald:400,700,300%7cPoppins:400,300,500,700,600" rel="stylesheet" type="text/css">
-    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link href="/favicon.png" rel="apple-touch-icon" type="image/png">
-    <link href="/favicon.png" rel="icon" type="image/png">
+    <title>
+        {% if page.title %}
+            {{ page.title }} | {{ site.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
 
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="/css/mobile.css" rel="stylesheet">
-
-    {% if page.title %}
-    {% assign page_title = page.title | escape | prepend: "Team Inceptus | " %}
-    {% else %}
-    {% assign page_title = site.title | escape %}
-    {% endif %}
-
-    <title>{{ page_title }}</title>
-
-    <meta name="theme_color" content="#164702">
-
-    <meta name="twitter:title" content="{{ page_title }}">
-    {% if page.summary %}
-    <meta name="twitter:card" content="{{ page.summary }}">
-    {% else %}
-    <meta name="twitter:card" content="{{ page.content | strip_html | truncate: 200 }}">
-    {% endif %}
-
-    <meta property="og:title" content="{{ page_title }}">
-    {% if page.summary %}
-    <meta name="og:description" content="{{ page.summary }}">
-    {% else %}
-    <meta name="og:description" content="{{ page.content | strip_html | truncate: 200 }}">
-    {% endif %}
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ page.url }}">
-    <meta property="og:image" content="https://teaminceptus.us/favicon.png">
-    <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:locale" content="en_US">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/css/main.css">
 
 </head>

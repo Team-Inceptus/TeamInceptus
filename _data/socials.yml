@@ -1,0 +1,12 @@
+- name: Twitter
+  icon: twitter.png
+  url: https://twitter.com/TeamInceptus
+- name: GitHub
+  icon: github.png
+  url: https://github.com/Team-Inceptus
+- name: Mail
+  icon: mail.png
+  url: mailto:team@teaminceptus.us
+- name: Discord
+  icon: discord.png
+  url: https://discord.gg/WVFNWEvuqX

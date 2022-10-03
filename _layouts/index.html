@@ -2,34 +2,63 @@
 layout: default
 ---
 
-<div class="index index-background">
+<div class="box">
 
-    <h1 id="index-title">Team Inceptus</h1>
-    <p id="index-description">{{ content }}</p>
-
-    <div class="pinned_repos">
-        {% assign pinned = site.data.pinned_repos | sort: "name" %}
-        {% for repo in pinned %}
-            <div class="pinned_repo">
-                <a href="https://github.com/{{ repo.url }}" target="_blank" class="repo_title">{% if repo.avatar %}<img src="{{ repo.avatar }}" alt="" class="repo_avatar">{% endif %} {{ repo.name }}</a>
-                <img src="https://opengraph.githubassets.com/045ba5c69020a7ab67effadc7565e7a9b1374ea5ee31774132ed0eb7904cad4c/{{ repo.git }}" alt="" class="repo_logo">
-                {% assign contributors = site.data.members %}
-                {% for contr in contributors %}
-                {% if contr.name == repo.main_contributor %}
-                    <p class="repo_text"><img src="{{ contr.icon }}" class="repo_subicon" alt="" title="{{ contr.name }}"><a class="repo_text" href="https://github.com/{{ contr.github }}" target="_blank">{{ contr.name }} </a>
-                        &nbsp;&nbsp;<a href="https://programminglanguages.info/language/{{ repo.lang }}" target="_blank"><img src="/assets/langs/{{ repo.lang }}.png" class="repo_subicon"></a>
-                        {% if repo.spigot %}
-                        &nbsp;<a href="{{ repo.spigot }}" target="_blank"><img src="/assets/spigot.png" class="repo_subicon"></a>
-                        {% endif %}
-                        {% if repo.javadocs %}
-                        &nbsp;<a href="{{ repo.javadocs }}" target="_blank"><img src="/assets/javadoc.png" class="repo_subicon nocircle"></a>
-                        {% endif %}
-                    </p>
-                {% break %}
-                {% endif %}
-                {% endfor %}
-            </div>
+    <img id="logo" src="/favicon.png" alt="Logo">
+    <h1 class="title">Team Inceptus</h1>
+    <h2 class="subtitle">Programming since 2021</h2>
+    <div id="socials">
+        {% for social in site.data.socials %}
+        <a class="social" href="{{ social.url }}" target="_blank" title="{{ social.name }}">
+            <img class="social" src="/assets/social/{{ social.icon }}" alt="{{ social.name }}">
+        </a>
         {% endfor %}
     </div>
 
+</div>
+
+<div style="width: 100%; margin-bottom: 60vh; display: flex; align-items: center; justify-content: center;">
+    <div id="people">
+        <h2 class="subtitle">Our Team</h2>
+
+        <div style="display: flex; flex-direction: row; margin-top: 3vh; height: 45vh; border: black 0.5vw solid;">
+            <div id="people-boxes">
+                {% for mem in site.data.people %}
+                <div class="people-box"  id="people-box-{{ mem.name }}" title="{{ mem.name }}" onclick="loadPeople(this, '{{ mem.name }}')">
+                    <div style="display: flex; align-items: center;">
+                        <img class="people-img" src="/assets/people/{{ mem.icon }}" alt="{{ mem.name }}">
+                        <h3 class="people-name">{{ mem.name }}</h3>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div id="people-info">
+                <img id="people-info-img" src="" alt="Unknown">
+                <h3 id="people-info-name">Unknown</h3>
+                <div class="people-text">
+                    <strong style="margin-right: 5px;">Languages:</strong>
+                    <p id="people-info-langs" class="people-text"></p>
+                </div>
+                <p id="people-info-desc" class="people-text">Unknown</p>
+                <p id="people-info-long-desc" class="people-text-long">Unknown</p>
+
+                <p id="people-info-social" class="people-text"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h1 class="title" id="pinned_repos">Pinned Repositories</h1>
+    <div class="repos">
+        {% assign repos = site.data.repos %}
+        {% for repo in repos %}
+        <div class="repo">
+            <a href="https://github.com/{{ repo.git }}" target="_blank" title="{{ repo.name }}">
+                <img src="https://opengraph.githubassets.com/1/{{ repo.git }}" class="repo-img" alt="{{ repo.name }}">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
 </div>

@@ -3,14 +3,14 @@
 
     {% include head.html %}
 
-    {% include header.html %}
-
     <body>
-        {{ content }}
+        <img alt="Dark/Light Mode" id="theme-icon" src="" onclick="switchTheme()">
 
-        <noscript>Please enable JavaScript for this site.</noscript>
-        <script src="/js/jquery.min.js"></script>
+        {{ content }}
+        <script src="/js/lib/jquery.min.js"></script>
+
         <script src="/js/main.js"></script>
+        <script src="/js/people.js"></script>
     </body>
 
 </html>
