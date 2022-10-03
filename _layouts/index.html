@@ -26,7 +26,7 @@ layout: default
                 {% for mem in site.data.people %}
                 <div class="people-box"  id="people-box-{{ mem.name }}" title="{{ mem.name }}" onclick="loadPeople(this, '{{ mem.name }}')">
                     <div style="display: flex; align-items: center;">
-                        <img class="people-img" src="/assets/people/{{ mem.icon }}" alt="{{ mem.name }}">
+                        <img class="people-img" src="/assets/people/{{ mem.icon | downcase }}" alt="{{ mem.name }}">
                         <h3 class="people-name">{{ mem.name }}</h3>
                     </div>
                 </div>

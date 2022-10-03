@@ -86,7 +86,7 @@ function loadPeople(element, name) {
 
     const data = peopleData[name];
 
-    $("#people-info-img").attr("src", `assets/people/${name}.png`);
+    $("#people-info-img").attr("src", `assets/people/${name.toLowerCase()}.png`);
     $("#people-info-name").html(data.name);
     $("#people-info-desc").html(data.description);
     $("#people-info-long-desc").html(data.long_desc);
