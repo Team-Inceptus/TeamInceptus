@@ -17,15 +17,15 @@ layout: default
 
 </div>
 
-<div style="width: 100%; margin-bottom: 60vh; display: flex; align-items: center; justify-content: center;">
+<div id="people-outdoor">
     <div id="people">
         <h2 class="subtitle">Our Team</h2>
 
-        <div style="display: flex; flex-direction: row; margin-top: 3vh; height: 45vh; border: black 0.5vw solid;">
+        <div id="people-indoor">
             <div id="people-boxes">
                 {% for mem in site.data.people %}
                 <div class="people-box"  id="people-box-{{ mem.name }}" title="{{ mem.name }}" onclick="loadPeople(this, '{{ mem.name }}')">
-                    <div style="display: flex; align-items: center;">
+                    <div style="display: flex; align-items: center; justify-content: center; ">
                         <img class="people-img" src="/assets/people/{{ mem.icon | downcase }}" alt="{{ mem.name }}">
                         <h3 class="people-name">{{ mem.name }}</h3>
                     </div>

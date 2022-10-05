@@ -1,5 +1,6 @@
 :root {
     --bg: #fff;
+    --bg-2: #f1f1f1;
 
     --link-color: black;
     --text-color: #000;
@@ -11,6 +12,7 @@
 
 [data-theme="dark"] {
     --bg: #2a2a2a;
+    --bg-2: #1a1a1a;
 
     --link-color: green;
     --text-color: #fff;
@@ -28,6 +30,7 @@ html {
 
 body {
     font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    overflow-x: hidden;
 }
 
 a {
@@ -71,98 +74,50 @@ a:hover {
 }
 
 .title {
-    font-size: 2.5vw;
+    font-size: calc(30px + 2vw);
     color: var(--text-color);
     margin: 2vh 0;
 }
 
 .subtitle {
-    font-size: 1.5vw;
+    font-size: calc(18px + 1vw);
     color: var(--text-color-2);
     margin: 1vh 0;
 }
 
 #people {
-    width: 60%;
-    margin: 2vh 0 0 0;
+    width: 65%;
+    min-width: 120px;
     border-top: var(--text-color-3) 0.5vh solid;
-    padding: 0 10vw;
-}
-
-.people-box {
-    display: block;
-    background-color: #eee;
-    margin: 0;
-    min-width: 128px;
-    max-width: 320px;
-    height: 25%;
-    width: 30vw;
-    padding: 1vh 0 0 1vw;
-}
-
-.people-img {
-    border-radius: 50%;
-    border: var(--text-color) solid 2px;
-    min-width: 16px;
-    max-width: 64px;
-    min-height: 16px;
-    max-height: 64px;
-    width: 10vw;
-    height: auto;
-    transition: transform 0.5s ease-in-out;
-}
-
-.people-img:hover {
-    transform: scale(1.1);
-    transition: transform 0.5s ease-in-out;
+    align-self: center;
+    height: 100%;
 }
 
 .people-name {
-    font-size: 1vw;
+    font-size: calc(8px + 0.5vw);
     color: #000;
-    padding-left: 1vw;
-}
-
-.people-text {
-    display: flex;
-    flex-direction: row;
-    margin: 0 0 1vh;
-    font-size: x-large;
-}
-
-#people-boxes {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    z-index: 1;
-}
-
-#people-info {
-    background-color: #ddd;
-    width: 40vw;
-    height: 100%;
     padding-left: 1vw;
 }
 
 #people-info-img {
     float: right;
-    background-color: darkgreen;
     min-width: 48px;
     max-width: 96px;
     min-height: 48px;
     max-height: 96px;
     width: 10vw;
-    margin: 0 0 3vh 0;
-    padding-left: 100%;
+    margin: 0 0 3vh 100%;
     height: auto;
     z-index: -1;
     transition: transform 1s ease-in-out;
 }
 
 .people-info-social {
-    width: 24px;
     min-width: 16px;
+    max-width: 48px;
     min-height: 16px;
+    max-height: 48px;
+    width: 2.5vw;
     height: auto;
     margin-right: 1vw;
 }
@@ -178,11 +133,18 @@ a:hover {
 }
 
 .social {
-    min-width: 32px;
+    min-width: 16px;
     max-width: 64px;
-    min-height: 32px;
+    min-height: 16px;
     max-height: 64px;
-    width: 0.5vw;
+    width: auto;
+    height: 3vh;
+    transition: transform 0.5s ease-in-out;
+}
+
+.social:hover {
+    transform: scale(1.3);
+    transition: transform 0.5s ease-in-out;
 }
 
 .repos {
@@ -248,4 +210,81 @@ a:hover {
 
 #pinned_repos {
     text-align: center;
+}
+
+#people-info-name {
+    font-size: calc(12px + 0.25vw);
+}
+
+#people-indoor {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 4vh;
+    min-height: 128px;
+    border: black 0.5vw solid;
+    height: 100%;
+}
+
+#people-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 25%;
+    width: 40%;
+}
+
+#people-info {
+    background-color: #ddd;
+    width: 60%;
+    height: 100%;
+    padding-left: 1vw;
+}
+
+.people-box {
+    background-color: #eee;
+    margin: 0;
+    min-width: 64px;
+    height: 25%;
+    width: 100%;
+    display: flex;
+}
+
+
+.people-text {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 1vh;
+    font-size: calc(12px + 0.3vw);
+}
+
+.people-text-long {
+    font-size: calc(10px + 0.3vw);
+}
+
+.people-img {
+    border-radius: 50%;
+    border: var(--text-color) solid 2px;
+    max-width: 64px;
+    min-height: 12px;
+    max-height: 64px;
+    width: calc(12px + 2vw + 1.5vh);
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+    margin-left: 1vw;
+}
+
+.people-img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+#people-outdoor {
+    width: 100%;
+    height: calc(160px + 20vh + 10vw);
+    margin-bottom: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

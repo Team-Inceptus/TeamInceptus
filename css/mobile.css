@@ -1,0 +1,36 @@
+@media (max-width: 800px) {
+
+    .repo:hover {
+        transform: scale(1.5);
+        transition: transform 1s ease-in-out;
+    }
+
+    .repo:hover:is(:last-child) {
+        transform: scale(1.5) translateX(-20%);
+    }
+
+    .repo:hover:is(:first-child) {
+        transform: scale(1.5) translateX(20%);
+    }
+
+    .social {
+        margin: 0 2vw;
+    }
+
+    #people {
+        width: 85%;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .people-name {
+        opacity: 0;
+    }
+
+    #people-outdoor {
+        height: 70vh;
+    }
+
+}
