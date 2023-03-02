@@ -1,20 +1,16 @@
-- name: InceptusLib
-  git: Team-Inceptus/InceptusLib
+- name: Novaconomy
+  git: Team-Inceptus/Novaconomy
 - name: MobChip
   git: GamerCoder215/MobChip
 - name: old-skool
   git: Team-Inceptus/old-skool
-- name: Runcaria
-  git: Team-Inceptus/Runcaria
+- name: ViperQOL
+  git: Team-Inceptus/ViperQOL
 - name: StarCosmetics
   git: GamerCoder215/StarCosmetics
 - name: Divisions
-  git: GamerCoder215/Divisions
+  git: Team-Inceptus/Divisions
 - name: procs
   git: Team-Inceptus/procs
-- name: Novaconomy
-  git: Team-Inceptus/Novaconomy
-- name: PlutoChat
-  git: GamerCoder215/PlutoChat
 - name: NoobySMP
   git: Team-Inceptus/NoobySMP

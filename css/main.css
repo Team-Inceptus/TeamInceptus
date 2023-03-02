@@ -239,7 +239,7 @@ a:hover {
     background-color: #ddd;
     width: 60%;
     height: 100%;
-    padding-left: 1vw;
+    padding: 0 1vw;
 }
 
 .people-box {
