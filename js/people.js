@@ -1,9 +1,9 @@
 const peopleData = {
-    "GamerCoder215": {
-        'name': "GamerCoder215",
+    "GamerCoder": {
+        'name': "GamerCoder",
         'description': 'Founder and Owner of Team Inceptus.',
-        'long_desc': 'GamerCoder215 has been programming since 2020 before the COVID-19 pandemic as a Discord Bot Creator. He has since expanded with the creation of multiple Minecraft mods and plugins, as well as other gaming-related software.',
-        'langs': 'Java, HTML, CSS, JavaScript, C, C++',
+        'long_desc': 'GamerCoder (aka GamerCoder215) has been programming since 2020 before the COVID-19 pandemic as a Discord Bot Creator. He has since expanded with the creation of multiple Minecraft mods and plugins, as well as other gaming-related software.',
+        'langs': 'Java, Kotlin, HTML, CSS, JavaScript, Vue.js, C, C++',
         'social': [
             {
                 'name': 'GitHub',
@@ -24,6 +24,11 @@ const peopleData = {
                 'name': 'Discord',
                 'icon': 'discord.png',
                 'link': 'https://discord.com/users/572173428086538270'
+            },
+            {
+                'name': 'YouTube',
+                'icon': 'youtube.png',
+                'link': 'https://www.youtube.com/@gamercoder'
             }
         ]
     },
@@ -75,6 +80,34 @@ const peopleData = {
                 'link': 'https://discord.com/users/385646856706981888'
             }
         ]
+    },
+    'Dragin': {
+        'name': 'Dragin',
+        'langs': 'Java, HTML, CSS, JavaScript, C#, Python, MySQL, Basic, BrainF, some C++',
+        'description': 'I wonder what this button does!',
+        'long_desc': 'Dragin is a programmer and Bedwars sweat, as well as a video editor, who occasionally opens IntelliJ, Unity, or Premiere Pro. He started programming in 2016, in Scratch and Lego Mindstorm, and leared Python the next year. He has since started making Minecraft plugins and mods, Unity and Javascript games, and YouTube videos (mostly for Lunatocity).',
+        'social': [
+            {
+                'name': 'GitHub',
+                'icon': 'github.png',
+                'link': 'https://github.com/Quadragintillion'
+            },
+            {
+                'name': 'SpigotMC',
+                'icon': 'spigot.png',
+                'link': 'https://www.spigotmc.org/members/dragincraft.1305449/'
+            },
+            {
+                'name': 'Discord',
+                'icon': 'discord.png',
+                'link': 'https://discord.com/users/514611928816156682'
+            },
+            {
+                'name': 'YouTube',
+                'icon': 'youtube.png',
+                'link': 'https://youtube.com/@Quadragintillion'
+            }
+        ]
     }
 }
 
@@ -108,4 +141,4 @@ function loadPeople(element, name) {
     current = element;
 }
 
-loadPeople(document.getElementById("people-box-GamerCoder215"), "GamerCoder215");
+loadPeople(document.getElementById("people-box-GamerCoder"), "GamerCoder");
