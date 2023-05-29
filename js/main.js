@@ -16,8 +16,8 @@ function switchTheme() {
 }
 
 function getThemeIcon(theme) {
-    if (theme === "light") return "assets/images/sun.png";
-    else return "assets/images/moon.png";
+    if (theme === "light") return "assets/sun.png";
+    else return "assets/moon.png";
 }
 
 function loadTheme(theme) {
