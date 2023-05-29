@@ -1,8 +1,10 @@
-- name: GamerCoder215
-  icon: gamercoder215.png
+- name: GamerCoder
+  icon: gamercoder.png
 - name: XHellMaster
   icon: xhellmaster.png
 - name: Spurious
   icon: spurious.png
 - name: Dank_Circle
   icon: dank_circle.png
+- name: Dragin
+  icon: dragin.png
