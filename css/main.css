@@ -1,16 +1,4 @@
 :root {
-    --bg: #fff;
-    --bg-2: #f1f1f1;
-
-    --link-color: black;
-    --text-color: #000;
-    --text-color-2: #333;
-    --text-color-3: #777;
-
-    --shadow: 0 10px 20px -5px rgb(169, 169, 169);
-}
-
-[data-theme="dark"] {
     --bg: #2a2a2a;
     --bg-2: #1a1a1a;
 
@@ -22,6 +10,18 @@
     --shadow: 0 10px 20px -5px rgb(0, 0, 0);
 }
 
+[data-theme="light"] {
+    --bg: #fff;
+    --bg-2: #f1f1f1;
+
+    --link-color: black;
+    --text-color: #000;
+    --text-color-2: #333;
+    --text-color-3: #777;
+
+    --shadow: 0 10px 20px -5px rgb(169, 169, 169);
+}
+
 html {
     overflow-x: hidden;
     overflow-y: auto;
@@ -31,6 +31,7 @@ html {
 body {
     font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     overflow-x: hidden;
+    color: var(--text-color);
 }
 
 a {
