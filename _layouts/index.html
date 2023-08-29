@@ -17,37 +17,16 @@ layout: default
 
 </div>
 
-<div id="people-outdoor">
-    <div id="people">
-        <h2 class="subtitle">Our Team</h2>
+<hr>
 
-        <div id="people-indoor">
-            <div id="people-boxes">
-                {% for mem in site.data.people %}
-                <div class="people-box"  id="people-box-{{ mem.name }}" title="{{ mem.name }}" onclick="loadPeople(this, '{{ mem.name }}')">
-                    <div style="display: flex; align-items: center; justify-content: center; ">
-                        <img class="people-img" src="/assets/people/{{ mem.icon | downcase }}" alt="{{ mem.name }}">
-                        <h3 class="people-name">{{ mem.name }}</h3>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-
-            <div id="people-info">
-                <img id="people-info-img" src="" alt="Unknown">
-                <h3 id="people-info-name">Unknown</h3>
-                <div class="people-text">
-                    <strong style="margin-right: 5px;">Languages:</strong>
-                    <p id="people-info-langs" class="people-text"></p>
-                </div>
-                <p id="people-info-desc" class="people-text">Unknown</p>
-                <p id="people-info-long-desc" class="people-text-long">Unknown</p>
-
-                <p id="people-info-social" class="people-text"></p>
-            </div>
-        </div>
+<div style="width: 100%; justify-content: center; display: flex;">
+    <div class="box-inner">
+        <p style="font-size: calc(1vh + 11px);">We create open-source Minecraft Projects for the community, both for free and for paid. We are a group of developers contributing different projects under one brand. Thanks for visiting us! Consider supporting our developers through sites like Patreon.</p>
     </div>
 </div>
+
+<br>
+<br>
 
 <div>
     <h1 class="title" id="pinned_repos">Pinned Repositories</h1>
