@@ -10,8 +10,8 @@
   git: Team-Inceptus/ViperQOL
 - name: StarCosmetics
   git: GamerCoder215/StarCosmetics
-- name: Divisions
-  git: Team-Inceptus/Divisions
+- name: VortexSidebars
+  git: Team-Inceptus/VortexSidebars
 - name: procs
   git: Team-Inceptus/procs
 - name: NoobySMP

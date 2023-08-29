@@ -6,6 +6,7 @@
     --text-color: #fff;
     --text-color-2: #ddd;
     --text-color-3: #888;
+    --text-color-4: #000;
 
     --shadow: 0 10px 20px -5px rgb(0, 0, 0);
 }
@@ -18,6 +19,7 @@
     --text-color: #000;
     --text-color-2: #333;
     --text-color-3: #777;
+    --text-color-4: #eee;
 
     --shadow: 0 10px 20px -5px rgb(169, 169, 169);
 }
@@ -56,6 +58,14 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.box-inner {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
 }
 
 #logo {
@@ -211,81 +221,4 @@ a:hover {
 
 #pinned_repos {
     text-align: center;
-}
-
-#people-info-name {
-    font-size: calc(12px + 0.25vw);
-}
-
-#people-indoor {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin-top: 4vh;
-    min-height: 128px;
-    border: black 0.5vw solid;
-    height: 100%;
-}
-
-#people-boxes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 25%;
-    width: 40%;
-}
-
-#people-info {
-    background-color: #ddd;
-    width: 60%;
-    height: 100%;
-    padding: 0 1vw;
-}
-
-.people-box {
-    background-color: #eee;
-    margin: 0;
-    min-width: 64px;
-    height: 25%;
-    width: 100%;
-    display: flex;
-}
-
-
-.people-text {
-    display: flex;
-    flex-direction: row;
-    margin: 0 0 1vh;
-    font-size: calc(12px + 0.3vw);
-}
-
-.people-text-long {
-    font-size: calc(10px + 0.3vw);
-}
-
-.people-img {
-    border-radius: 50%;
-    border: var(--text-color) solid 2px;
-    max-width: 64px;
-    min-height: 12px;
-    max-height: 64px;
-    width: calc(12px + 2vw + 1.5vh);
-    height: auto;
-    transition: transform 0.5s ease-in-out;
-    margin-left: 1vw;
-}
-
-.people-img:hover {
-    transform: scale(1.1);
-    transition: transform 0.5s ease-in-out;
-}
-
-#people-outdoor {
-    width: 100%;
-    height: calc(160px + 20vh + 10vw);
-    margin-bottom: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
